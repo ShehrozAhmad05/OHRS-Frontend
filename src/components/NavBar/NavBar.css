@@ -1,0 +1,328 @@
+/* General navbar styles */
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    overflow-x: hidden; 
+  }
+  .navbar-custom {
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    height: 110px ;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 80px;
+  }
+  
+  /* Logo Image Style */
+  .logo-image {
+    max-height: 80px !important;
+    width: auto ;
+    margin: 20px;
+  }
+  
+  /* Center Links */
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 30px;
+  }
+  
+  /* Dropdown Item Styles */
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: black !important;
+    text-decoration: none;
+  }
+  
+  .dropdown-item .dropdown-text {
+    color: #0b6354 !important;
+    font-family: 'Sarabun', sans-serif !important;
+    font-size: 14px;
+    position: relative;
+  }
+  .dropdown-item .dropdown-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background-color: #0b6354;
+    transition: width 0.3s ease;
+  }
+  .dropdown-item:hover .dropdown-text::after,
+  .dropdown-item.active .dropdown-text::after {
+    width: 100%; /* Expand underline on hover */
+  }
+  .dropdown-item:hover .dropdown-text,
+  .dropdown-item.active .dropdown-text {
+    color: #0b6354 !important; /* Change color on hover */
+  }
+  
+  /* Button Styles */
+  .book-button {
+    margin-left: auto;
+    margin-right: 35px;
+    border-color: #0b6354 !important;
+    background-color: #0b6354 !important;
+    color: white !important;
+    border-radius: 0;
+    height: 55px;
+    width: 160px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .book-button1{
+    margin-top: 10px !important;
+  }
+  .hamburger-icon {
+    display: none;
+  }
+  /* Hamburger Icon Styles */
+  .hamburger-icon {
+    display: none; /* Hide by default */
+    position: absolute;
+    left: 20px; /* Position it on the right side */
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  /* Mobile Menu Styles */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #f8f9fa; /* Mobile menu background color */
+    top: 70px; /* Adjust based on your navbar height */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
+  }
+  
+  .mobile-menu .nav-link {
+    padding: 10px 20px;
+    color: #505050;
+  }
+  .button{
+    display: none;
+  }
+  .mobile-menu .nav-link:hover {
+    background-color: #0b6354;
+    color: white;
+  }
+  
+  /* For the animated hamburger icon */
+  .animated-icon1 {
+    width: 30px;
+    height: 20px;
+    position: relative;
+  }
+  
+  .animated-icon1 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #0b6354;
+    border-radius: 9px;
+    left: 0;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .animated-icon1 span:nth-child(1) {
+    top: 0;
+  }
+  
+  .animated-icon1 span:nth-child(2) {
+    top: 10px;
+  }
+  
+  .animated-icon1 span:nth-child(3) {
+    top: 20px;
+  }
+  
+  .animated-icon1.open span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+  
+  .animated-icon1.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .animated-icon1.open span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+  }
+  
+  /* Media Queries for 768px and below */
+  @media (max-width: 768px) {
+    .navbar-header {
+      justify-content: space-between; /* Ensure space between elements */
+    }
+  
+    .book-button {
+      width: 115px;
+      height: 40px;
+      /* Add some space between the logo and button */
+      /* margin-right: 10px; Push it to the right */
+      font-size: 11px;
+      font-weight: 500;
+    }
+  .button{
+    display: block;
+    margin-left: -5px !important;
+    
+  }
+    .navbar-links {
+      display: none; /* Hide the main links in the navbar */
+    }
+  
+    .hamburger-icon {
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  
+    /* Mobile Menu Styles with Borders */
+    .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: #f8f9fa;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+      z-index: 999;
+    }
+  
+    /* Equal spacing between all menu items and borders on all sides */
+    .mobile-menu .nav-link,
+    .mobile-dropdown .dropdown-header {
+      padding: 15px 20px;
+      color: #505050;
+      text-align: left;
+      margin: 0; /* Ensure no margins between items */
+      border: 1px solid #726868; /* Border on all four sides */
+      box-sizing: border-box; /* Ensure the border doesn't affect the layout */
+    }
+  
+    /* Remove gap between "ACCOMMODATIONS" and "ABOUT US" */
+    .mobile-menu .nav-link {
+      margin-bottom: 0; /* Remove any margin at the bottom */
+    }
+  
+    /* Separate sections for "ACCOMMODATIONS" and "ABOUT US" */
+    .mobile-dropdown {
+      margin-bottom: 0; /* Remove the gap between dropdown and next item */
+    }
+  
+    /* Full-width dropdown items with borders */
+    .dropdown-items {
+      padding-left: 0;
+      width: 100%; /* Full screen width */
+      border: 1px solid #505050; /* Border for dropdown items */
+      border-top: none; /* Avoid double border between dropdown header and items */
+      box-sizing: border-box; /* Ensure border doesn't affect layout */
+    }
+  
+    /* Add dropdown arrow next to "ACCOMMODATIONS" text */
+    .mobile-dropdown .dropdown-header {
+      position: relative;
+    }
+  
+    .mobile-dropdown .dropdown-header::after {
+      content: '▼'; /* Add arrow icon */
+      position: absolute;
+      right: 15px; /* Adjust arrow position */
+      top: 50%;
+      transform: translateY(-50%);
+      color: #b6abab;
+    }
+  }
+  
+  /* For screens smaller than 480px */
+  @media (max-width: 480px) {
+    .navbar-custom {
+      height: 70px;
+    }
+  
+    
+    /* Align all headings to the left for smaller screens */
+    .mobile-menu .nav-link,
+    .mobile-dropdown .dropdown-header {
+      padding: 12px 20px;
+      color: #505050;
+      text-align: left;
+      margin-left: 0;
+      border: 1px solid#b6abab; /* Add a border around each link */
+      box-sizing: border-box; /* Ensure the border doesn't affect the layout */
+    }
+  
+    /* Remove any unnecessary margin or gap between sections */
+    .mobile-menu .nav-link {
+      margin-bottom: 0;
+    }
+    .mobile-dropdown .dropdown-header {
+      color: #505050; /* Change this to your desired color */
+    }
+    
+    /* Change text color of dropdown items in mobile view */
+    .dropdown-items .dropdown-item {
+      color: #505050; /* Change this to your desired color */
+    }
+    .mobile-dropdown {
+      margin-bottom: 0; /* Ensure no gap between dropdown and following items */
+    }
+  
+    .dropdown-items {
+      padding-left: 0;
+      width: 100%;
+      border: 1px solid #b6abab; /* Full-width dropdown items with border */
+      border-top: none;
+      box-sizing: border-box;
+    }
+    .logo-image {
+      max-height: 40px;
+      width: auto;
+      margin: 0 20px;
+      margin-left: 20px !important;
+     
+    }
+    
+    .mobile-dropdown .dropdown-header {
+      position: relative;
+    }
+  
+    .mobile-dropdown .dropdown-header::after {
+      content: '▼';
+      position: absolute;
+      right: 200px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #505050;
+    }
+  }

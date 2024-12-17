@@ -1,0 +1,302 @@
+.parallaxContainer {
+    position: relative;
+    min-height: 0vh; /* Ensure the container takes the full height of the viewport */
+    background-color: #f0f0f0;
+}
+
+.Overlay {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the background */
+}
+h1 {
+    margin: 0; /* Remove default margin from h1 */
+    padding: 0; /* Remove default padding from h1 */
+}
+.heading{
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+
+}
+.contactTitle {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    position: relative; /* Ensure text has its own stacking context */
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+    padding-top: 350px; /* Padding for vertical alignment */
+    font-size: 4.5rem; /* Increase text size (adjust as needed) */
+    /* You can also use other units like px, em, etc. */
+}
+.animated-heading {
+    text-align: start; 
+    margin-left: 100px;
+    margin-top: 50px; 
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; 
+    color: #CCC1BD; 
+    font-size: 7rem; 
+    line-height: 1.2; 
+    height: 250px;
+    overflow: hidden; /* Hide any overflow during the animation */
+  }
+  
+  .paragraph{
+  
+    display: inline-block; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    opacity: 0; 
+    animation: fadeIn 0.5s forwards; 
+    transition: opacity 0.5s ease; 
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 1; 
+    }
+  }
+  
+  .paragraph{
+    animation: fadeIn 1.0s ease forwards;
+  }
+  .contentSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+    max-width: 1400px;
+    margin-top: -40px;
+    /* margin: 0 auto; */
+  }
+  
+  .contentLeft, .contentRight {
+    width: 48%; 
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+  }
+  .imageContainer {
+    position: relative; /* To position the button relative to the image */
+    width: 100%; /* Adjust as needed */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 70px auto; /* Center the container */
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensure the image fills the container */
+  }
+  
+  .roundButton {
+    position: absolute; /* Position it absolutely inside the container */
+    top: 50%; /* Adjust as needed for vertical positioning */
+    left: 50%; /* Adjust as needed for horizontal positioning */
+    transform: translate(-50%, -50%); /* Center the button exactly in the middle */
+    background-color: #0B6354; /* Button background color */
+    width: 180px; /* Set equal width and height to make the button a perfect circle */
+    height: 180px;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes the button round */
+    font-size: 14px; /* Text size */
+    text-align: center;
+    line-height: 100px; /* Align text vertically within the button */
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+  }
+  
+  .roundButton:hover {
+    background-color: #0B6354; /* Darker shade on hover */
+    transform: translate(-50%, -50%) scale(0.95); /* Slightly increase the size of the button */
+
+  }
+  .qualitiesSection {
+    margin-left: 70px;
+    /* text-align: center; */
+    padding: 30px 20px; /* Add some padding */
+    /* background-color: #f9f9f9;  */
+  }
+  
+  .qualitiesTitle {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0px;
+  }
+  
+  .qualitiesGrid {
+    display: flex;
+    flex-wrap: wrap; /* Ensure flexibility on smaller screens */
+    justify-content: center;
+    gap: 5px; /* Space between items */
+  }
+  
+  .qualityItem {
+    display: flex;
+    align-items: center;
+    width: 30%; /* Three columns, each 30% width */
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+    font-size: 1.1rem;
+    line-height: 0.2;
+
+  }
+  
+  .tickIcon {
+    color: #0B6354; /* Green color for the tick */
+    margin-right: 15px; /* Space between the icon and text */
+    font-size: 1.1rem; /* Adjust the icon size */
+  }
+  .reviewsSection {
+    padding: 60px 90px; /* Decrease padding for the reviews section */
+  }
+  
+  .reviewItem {
+    padding: 5px; /* Adjust padding for individual review items */
+    text-align: center; 
+    flex: 1 1 auto; /* Allow items to grow and shrink */
+    font-size: 18px;
+  }
+  .stars{
+    color: #0B6354;
+  }
+  .custom-arrow {
+    font-size: 25px; /* Size of the arrow icons */
+    color: #0B6354; /* Customize arrow color */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position them correctly */
+    top: 50%; /* Center them vertically */
+    transform: translateY(-50%); /* Adjust position */
+  }
+  
+  .custom-arrow.slick-prev {
+    left: -30px; /* Adjust the position for the left arrow */
+  }
+  
+  .custom-arrow.slick-next {
+    right: -30px; /* Adjust the position for the right arrow */
+  }
+  
+  .custom-arrow:hover {
+    color: #0B6354; /* Change color on hover */
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .reviewsSection {
+      padding: 30px 15px; /* Further adjust padding for small screens */
+    }
+  
+    .reviewItem {
+      font-size: 14px; /* Adjust font size for small screens */
+    }
+  
+    .custom-arrow {
+      font-size: 18px; /* Smaller arrow size for small screens */
+    }
+  
+    .custom-arrow.slick-prev {
+      left: -15px; /* Adjust position for small screens */
+    }
+  
+    .custom-arrow.slick-next {
+      right: -15px; /* Adjust position for small screens */
+    }
+  }
+  
+  
+ 
+  @media screen and (max-width: 768px) {
+    .contentSection {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .contentLeft, .contentRight {
+      
+      width: 100%;
+      margin-bottom: 20px;
+      
+    }
+    .animated-heading {
+        text-align: start; 
+        margin-left: 10px;
+        margin-top: 20px; 
+        margin-bottom: 10px;
+        font-family: 'Arial', sans-serif; 
+        color: #CCC1BD; 
+        font-size: 4.5xrem; 
+        line-height: 1.5; 
+      }
+      .contentSection {
+        display: flex;
+        justify-content: space-between;
+        /* padding: 10px 100px; */
+        max-width: 1400px;
+        margin-top: -100px;
+        /* margin: 0 auto; */
+      }
+      .image {
+        width: 100%;
+        height: auto;
+        display: block; /* Ensure the image fills the container */
+      }
+      
+      .roundButton {
+        position: absolute; /* Position it absolutely inside the container */
+        top: 50%; /* Adjust as needed for vertical positioning */
+        left: 50%; /* Adjust as needed for horizontal positioning */
+        transform: translate(-50%, -50%); /* Center the button exactly in the middle */
+        background-color: #0B6354; /* Button background color */
+        width: 100px; /* Set equal width and height to make the button a perfect circle */
+        height: 100px;
+        color: white;
+        border: none;
+        border-radius: 50%; /* Makes the button round */
+        font-size: 10px; /* Text size */
+        text-align: center;
+        line-height: 100px; /* Align text vertically within the button */
+        
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; 
+      }
+      .imageContainer {
+        position: relative; /* To position the button relative to the image */
+        width: 100%; /* Adjust as needed */
+        max-width: 1200px; /* Adjust as needed */
+        margin: 10px auto; /* Center the container */
+      }
+      .qualityItem {
+        margin-left: -60px;
+        width: 100%; /* Take up full width for small screens */
+        /* justify-content: flex-start ; */
+        padding: 10px 0; /* Reduce padding for a tighter fit */
+      }
+    
+      .qualitiesGrid {
+        gap: 10px; /* Adjust gap for smaller screens */
+      }
+    
+      .qualitiesTitle {
+        font-size: 0.5rem; /* Smaller font size for mobile */
+      }
+    
+      .qualityItem p {
+        font-size: 0.8rem; /* Smaller text on smaller screens */
+      }
+  }

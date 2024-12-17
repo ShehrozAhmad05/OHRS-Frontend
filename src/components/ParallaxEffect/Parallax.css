@@ -1,0 +1,36 @@
+.parallax-container {
+    position: relative;
+    min-height: 0vh; /* Ensure the container takes the full height of the viewport */
+    background-color: #f0f0f0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the background */
+}
+h1 {
+    margin: 0; /* Remove default margin from h1 */
+    padding: 0; /* Remove default padding from h1 */
+}
+.heading{
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+
+}
+.contact-title {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    position: relative; /* Ensure text has its own stacking context */
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+    padding-top: 350px; /* Padding for vertical alignment */
+    font-size: 4.5rem; /* Increase text size (adjust as needed) */
+    /* You can also use other units like px, em, etc. */
+}

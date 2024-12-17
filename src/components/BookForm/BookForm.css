@@ -1,0 +1,65 @@
+.parallax-image-container {
+    width: 100%;
+}
+
+.animated-heading {
+    text-align: start;
+    margin-left: 100px;
+    margin-top: 30px;
+    font-family: 'Arial', sans-serif;
+    color: #CCC1BD;
+    font-size: 6.5rem;
+    line-height: 1.2;
+    height: 150px;
+    overflow: hidden;
+    /* Hide any overflow during the animation */
+}
+
+.paragraph {
+
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    transition: opacity 0.5s ease;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.paragraph {
+    animation: fadeIn 1.0s ease forwards;
+}
+
+/* Overlay for Parallax */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+/* Title Styling */
+.contact-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 2;
+}

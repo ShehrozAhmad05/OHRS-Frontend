@@ -1,0 +1,413 @@
+.suite-section {
+    display: flex;
+    align-items: center; /* Align button and image vertically */
+    justify-content: space-between; /* Space out button and image horizontally */
+    height: 100vh; /* Full viewport height */
+    padding: 0 50px; /* Add spacing on the left and right */
+  }
+  
+  .round {
+    background-color: #0B6354; /* Button background color */
+    width: 180px; /* Set fixed width */
+    height: 180px; /* Set fixed height */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Make the button round */
+    font-size: 14px; /* Text size */
+    text-align: center;
+    line-height: 180px; /* Center text vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0; /* Prevent button from stretching */
+  }
+  
+  .round:hover , .round:focus{
+    background-color: #0B6354 !important; /* Darker shade on hover */
+    transform: scale(0.95); /* Slightly enlarge button on hover */
+  }
+  
+  .suite-image-container {
+    display: flex;
+    justify-content: center; /* Center image within its container */
+    align-items: center; /* Center image vertically */
+    width: 100%; /* Reduce container width for better layout */
+    height: auto; /* Automatically adjust height */
+  }
+  
+  .suite-image {
+    margin-left: -100px;
+    width: 90%; /* Set width to make it wider */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 450px; /* Explicitly limit the height */
+    object-fit: cover; /* Ensure image scales proportionally */
+    
+  }
+  
+  
+  
+  .Home-parallax-container {
+      position: relative;
+      min-height: 0vh; /* Ensure the container takes the full height of the viewport */
+      background-color: #f0f0f0;
+  }
+  
+  .Home-overlay{
+      position: absolute;
+      top: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+      z-index: 1; /* Ensure the overlay is above the background */
+  }
+  h1 {
+      margin: 0; /* Remove default margin from h1 */
+      padding: 0; /* Remove default padding from h1 */
+  }
+  .heading{
+      color: white;
+      text-align: center;
+      padding-top: 200px;
+  
+  }
+  .Home-contact-title {
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      position: relative; /* Ensure text has its own stacking context */
+      z-index: 2; /* Ensure the text is above the overlay */
+      color: #fff; /* Text color */
+      text-align: center; /* Center text */
+      padding-top: 350px; /* Padding for vertical alignment */
+      font-size: 4.5rem; /* Increase text size (adjust as needed) */
+      /* You can also use other units like px, em, etc. */
+  }
+  .homeContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0px;
+      /* justify-content: center; */
+      height: 100vh; /* Full viewport height */
+      text-align: center;
+      /* padding: 0 10px; */
+    }
+    
+    .homeHeading {
+      font-size: 1rem;
+      /* font-weight: bold; */
+      /* margin-bottom: -10px; */
+      color: #0B6354;
+    }
+    .head {
+      font-size: 2.2rem; /* Adjust font-size as needed */
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      color: #333; /* Customize color */
+    }
+    .homeDescription {
+      font-size: 1.2rem;
+      max-width: 600px;
+      color: #555; /* Adjust color to your theme */
+      line-height: 1.3;
+    }
+    .info-container {
+      /* margin-top: 100px !important; */
+      gap: 300px;
+      display: flex;
+      justify-content: space-evenly; /* Space elements evenly */
+      margin: 140px 10px; /* Adjust margin for spacing */
+      color: #CCC1BD; /* Same color as animated text */
+      font-family: 'Arial', sans-serif; /* Ensure consistent font */
+    }
+    
+    .info-block {
+      text-align: center; /* Center-align text within each block */
+    }
+    
+    .info-title {
+      font-size: 7rem; /* Large font size for main time/date/temperature */
+      margin: 0; /* Remove default margin */
+      position: relative; /* To position AM/PM correctly */
+    }
+    
+    .info-subtitle {
+      font-size: 1.5rem; /* Smaller font size for subtitles */
+      margin: 0; /* Remove default margin */
+      line-height: 1.5; /* Adjust line spacing */
+      color: #000;
+    }
+    
+    .ampm {
+      /* margin-top: 20px; */
+      font-size: 14px; /* Smaller size for AM/PM */
+      vertical-align: top; /* Align it properly with the time */
+      margin-left: -10px; /* Add some spacing between time and AM/PM */
+      color: #0B6354;
+    }
+    .about-section {
+      display: flex;
+      flex-direction: column;
+  align-items: flex-start;
+      margin-left: 70px; 
+      /* margin-top: 50px; */
+    }
+    
+    .about-text {
+      margin-bottom: 30px; /* Space between text and images */
+    }
+    
+    .about-heading {
+      font-size: 16px;
+      /* font-weight: bold; */
+    
+      /* margin-bottom: 20px; */
+      color: #0B6354;
+    }
+    
+    .about-subheading {
+      font-size: 2rem;
+      /* margin: 10px 0 0 0;  */
+      color: #555; /* Lighter text color */
+    }
+    
+    .image-row {
+      display: flex;
+      justify-content: flex-start; /* Align images to the left */
+      gap: 80px; /* Add spacing between images */
+      margin-bottom: 50px;
+    }
+    
+    .about-image {
+      width: 400px; /* Adjust image width */
+      height: 90%; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensure the image fits properly */
+    }
+    
+    .middle-image {
+      margin-top: 90px; /* Offset the middle image */
+      /* height: auto; */
+  
+  
+    }
+    .fullwidth-image-section {
+      margin-top: 60px;
+      position: relative;
+      width: 100%; /* Full width of the container */
+      height: 80vh; /* Adjust height as needed */
+      overflow: hidden; /* Ensure no content spills outside */
+    }
+    
+    .background-image {
+  
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the full area without distortion */
+      display: block; /* Ensure proper layout */
+    }
+    
+    .text-overlay {
+      position: absolute;
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust for perfect centering */
+      color: #fff; /* White text for contrast */
+      text-align: center; /* Center-align text */
+      padding: 5px; /* Add some padding */
+      /* background-color: rgba(0, 0, 0, 0.5);  */
+      border-radius: 10px; /* Optional: rounded corners for text box */
+    }
+    
+    .image-heading {
+      font-size: 2.4rem; /* Adjust font size for the heading */
+      margin-bottom: 10px; /* Add space below heading */
+      font-weight: bold;
+    }
+    
+    .image-description {
+      
+      font-size: 1.2rem; /* Smaller font for the description */
+      line-height: 1.5; /* Improve readability */
+    }
+    
+    
+    @media (max-width: 767px) {
+      .suite-section {
+        flex-direction: column; /* Stack the elements */
+        text-align: center;
+       
+        padding: 20px; /* Add padding for smaller screens */
+        height: auto; /* Let content adjust height naturally */
+      }
+    
+      .round {
+        background-color: #0B6354; /* Button background color */
+        position: absolute;
+    width: 100px; /* Set fixed width */
+    height: 100px; /* Set fixed height */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Make the button round */
+    font-size: 10px; /* Text size */
+    text-align: center;
+    line-height: 10px; /* Center text vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0; /* Prevent button from stretching */
+    z-index: 2;
+      }
+    
+      .suite-image-container {
+    margin-left: 100px;
+        width: 80%; /* Make the image full-width */
+        margin-top: 50px; /* Add spacing above the image */
+      }
+    
+      .suite-image {
+        max-height: 300px; /* Reduce the image height on small screens */
+        width: 100%; /* Ensure it takes up the full width */
+      }
+      
+      .head {
+        margin-top: 30px;
+        font-size: 1rem; /* Adjust font-size as needed */
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 0px;
+        color: #333; /* Customize color */
+      }
+      .homeDescription {
+        margin-top: 20px;
+        font-size: 1rem;
+        max-width: 600px;
+        color: #555; /* Adjust color to your theme */
+        line-height: 1.3;
+      }
+      .info-container {
+        /* margin-top: 100px !important; */
+        gap: 30px;
+        display: flex;
+        /* justify-content: space-evenly;  */
+        flex-direction: column;
+        margin: 40px 100px; /* Adjust margin for spacing */
+        color: #CCC1BD; /* Same color as animated text */
+        font-family: 'Arial', sans-serif; /* Ensure consistent font */
+        /* margin-bottom: 50px; */
+      }
+      
+      .info-block {
+        text-align: center; /* Center-align text within each block */
+      }
+      
+  
+      
+      .info-subtitle {
+        font-size: 1rem; /* Smaller font size for subtitles */
+        margin: 0; /* Remove default margin */
+        line-height: 1.5; /* Adjust line spacing */
+        color: #000;
+      }
+      
+      .info-title {
+        font-size: 4.5rem; /* Adjusted for smaller screens */
+        margin: 0;
+        position: relative; /* To position .ampm correctly */
+        display: inline-flex; /* Ensure inline alignment of content */
+        align-items: center; /* Vertically align elements */
+      }
+      
+      .ampm {
+        margin-bottom: 50px;
+        font-size: 8px; /* Adjust font size for smaller screens */
+        margin-left: 3px; /* Adjust spacing */
+      }
+      .about-section {
+        display: flex;
+        flex-direction: column;
+    align-items: center;
+        margin-left: 0px; 
+        padding: 100px 50px; /* Add spacing on the left and right */
+        /* margin-top: 50px; */
+      }
+      
+      .about-text {
+        margin-bottom: 0px; /* Space between text and images */
+      }
+      
+      .about-heading {
+        font-size: 16px;
+        /* font-weight: bold; */
+        margin-left: -160px;
+        margin-bottom: -20px;
+        color: #0B6354;
+      }
+      
+      .about-subheading {
+        margin-left: -30px;
+        font-size: 2rem;
+        /* margin: 10px 0 0 0;  */
+        color: #555; /* Lighter text color */
+      }
+      
+      .image-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px; 
+        margin-bottom: 50px;
+      }
+      
+      .about-image {
+        width: 300px; /* Adjust image width */
+        height: 90%; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image fits properly */
+      }
+      
+      .middle-image {
+        margin-top: 0px; /* Offset the middle image */
+        /* height: auto; */
+        }
+        .fullwidth-image-section {
+          margin-top: 60px;
+          position: relative;
+          width: 100%; /* Full width of the container */
+          height: 80vh; /* Adjust height as needed */
+          overflow: hidden; /* Ensure no content spills outside */
+        }
+        
+        .background-image {
+      
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Cover the full area without distortion */
+          display: block; /* Ensure proper layout */
+        }
+        
+        .text-overlay {
+          position: absolute;
+          top: 50%; /* Center vertically */
+          left: 50%; /* Center horizontally */
+          transform: translate(-50%, -50%); /* Adjust for perfect centering */
+          color: #fff; /* White text for contrast */
+          text-align: center; /* Center-align text */
+          padding: 5px; /* Add some padding */
+          /* background-color: rgba(0, 0, 0, 0.5);  */
+          border-radius: 10px; /* Optional: rounded corners for text box */
+        }
+        
+        .image-heading {
+          font-size: 1.4rem; /* Adjust font size for the heading */
+          margin-bottom: 10px; /* Add space below heading */
+          font-weight: bold;
+        }
+        
+        .image-description {
+          
+          font-size: 1rem; /* Smaller font for the description */
+          line-height: 1.5; /* Improve readability */
+        }
+   }
+      
+    
+    

@@ -1,0 +1,143 @@
+body {
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    font-family: 'Sarabun', sans-serif;
+  }
+  .parallax-container {
+    position: relative;
+    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+    /* overflow: hidden; Prevent overflow */
+    /* background-color: #f0f0f0; */
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Ensure the overlay is above the background */
+}
+h1 {
+    margin: 0; /* Remove default margin from h1 */
+    padding: 0; /* Remove default padding from h1 */
+}
+.heading{
+    color: white;
+    text-align: center;
+    padding-top: 150px;
+
+}
+.contact-title {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    position: relative; /* Ensure text has its own stacking context */
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+    padding-top: 250px; /* Padding for vertical alignment */
+    font-size: 4.5rem; /* Increase text size (adjust as needed) */
+    /* You can also use other units like px, em, etc. */
+}
+.room-slider-section {
+    display: flex;
+    flex-direction: column; /* Stack sliders vertically */
+    width: 100%; /* Full width */
+    margin-top: 12%;
+    
+  }
+  
+  .slider-container {
+    display: flex;
+    margin: 20px 0; /* Keep the same space between sliders */
+    width: 95%; /* Keep the width same */
+    margin-left: 5%; /* Center the slider */
+    margin-right: 5%; /* Center the slider */
+    height: 400px; /* Keep the container height fixed */
+    max-width: 1100px; /* Keep the container width fixed */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .slider-images {
+    display: flex; /* Arrange images horizontally */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Ensure the height is consistent */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .slider-image {
+    width: 100%; /* Each image takes up the full width of the slider */
+    height: 100%; /* Ensure images take up the full height of the slider container */
+  }
+  
+  .slider-image img {
+    width: 100%; /* Ensure images fit within the container */
+    height: 500px; /* Increase image height without changing container */
+    object-fit: cover; /* Scale and crop images to cover the slider area */
+  }
+  
+  .slider-right {
+    margin-top: 20px;
+    margin-left: 20px; /* Space between the slider and description */
+    display: flex;
+    flex-direction: column; /* Stack description items vertically */
+    align-items: flex-start;
+    width: 100%; /* Set width to match slider-container */
+  }
+  
+  .slider-right h2 {
+    margin: 0 0 10px; /* Space below the heading */
+    font-family: 'Forum', sans-serif;
+    font-weight: 550;
+    font-size:2.5rem;
+  }
+  
+    .slider-right p {
+        margin: 0; /* Reset margin for paragraphs */
+        line-height: 1.9; /* Adjust this value to increase/decrease spacing */
+        font-size: 14px; /* Keep your existing font size */
+        color: #0b6354; /* Keep your existing color */
+        
+    }
+    .slider-right p1 {
+        margin-top: 4%;
+        line-height: 1.8; /* Adjust this value to increase/decrease spacing */
+        font-size: 14px; /* Keep your existing font size */
+        color: #505050; /* Keep your existing color */
+    }
+    .pHeading{
+        padding: 10px 0;
+        color: #505050;
+      }
+      .book-suite-button {
+        background-color: transparent; /* Transparent background */
+        border: none; /* No border */
+        color: #000; /* Text color */
+        font-size: 1rem; /* Adjust the font size as needed */
+        cursor: pointer; /* Change cursor to pointer */
+        position: relative; /* Position relative to use pseudo-element */
+        padding: 10px 0; /* Padding to give some space above and below */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s; /* Smooth color transition */
+      }
+      
+      .book-suite-button:hover {
+        color: #0b6354; /* Change text color on hover (optional) */
+      }
+      
+      .book-suite-button::after {
+        content: ""; /* Empty content for the line */
+        display: block; /* Block element for line */
+        width: 100%; /* Full width of the button */
+        height: 2px; /* Line height */
+        background-color: #0b6354; /* Line color */
+        position: absolute; /* Position absolutely */
+        left: 0; /* Align to the left */
+        /* bottom: px; Position it just below the button */
+        transform: scaleX(0); /* Initially scale down to 0 */
+        transition: transform 0.3s; /* Smooth transition for scaling */
+      }
+      
+      .book-suite-button:hover::after {
+        transform: scaleX(1); /* Scale to full width on hover */
+      }
+      

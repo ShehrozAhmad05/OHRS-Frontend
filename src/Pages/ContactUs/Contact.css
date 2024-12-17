@@ -1,0 +1,350 @@
+.animated-heading {
+    text-align: start; 
+    margin-left: 100px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; 
+    color: #CCC1BD; 
+  
+    font-size: 7rem; 
+    line-height: 1.5; 
+  }
+  
+  .paragraph {
+  
+    display: inline-block; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    opacity: 0; 
+    animation: fadeIn 0.5s forwards; 
+    transition: opacity 0.5s ease; 
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 1; 
+    }
+  }
+  
+  .paragraph {
+    animation: fadeIn 1.0s ease forwards;
+  }
+  .form-page {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+    /* margin-top: -160px; */
+  }
+  
+  .info-section {
+    flex: 1;
+    margin-top: 20px; 
+  
+  }
+  
+  
+  .info-section p {
+  
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify; 
+    max-width: 500px;
+    /* text-indent: 7em;  */
+    /* padding-left: 2em; */
+    line-height: 1.8;
+  }
+  
+  
+  .info-item {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+  }
+  
+  .info-item i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #1E6F61; /* Icon color */
+  }
+  
+  .info-item span {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .info-item.no-icon {
+    padding-left: 32px; /* Align it with the text next to the icon */
+  }
+  .info-item:nth-child(2) {
+    margin-bottom: 40px; /* Adjust the gap size as needed */
+  }
+  
+  
+  
+  .form-section {
+    flex: 1;
+    margin-top: 20px;
+  
+  }
+  
+  .form-heading {
+    margin-top: 40px;
+    text-align: start;
+    /* font-size: 2rem; */
+    margin-bottom: 10px;
+    color: #1E6F61;
+  }
+  
+  .form-subheading {
+    text-align: start;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    color: #000;
+  }
+  
+  .reservation-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 0; /* Ensure input fields are also aligned to the left */
+  }
+  .checkterms {
+   
+    display: flex;
+    align-items: center; /* Aligns checkbox and label vertically */
+    margin-top: 20px; /* Space between the last input field and the checkbox */
+    margin-bottom: 40px; /* Space below the checkbox */
+    padding-left: 0; /* Ensure no padding pushes it to the right */
+  }
+  
+  .terms-label {
+    margin-left: 5px; /* Space between checkbox and label text */
+    font-size: 0.9rem; /* Adjust font size as needed */
+    color: #555; /* Ensure the text color matches your theme */
+  }
+  .error-message {
+    /* align-items: flex-start; */
+    text-align: start;
+    color: red;
+    font-size: 0.8rem;
+    margin-left: 5px; /* Space between input and error message */
+  }
+  
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    /* border-bottom: 2px solid #ccc; */
+    outline: none;
+  }
+  
+  .form-group textarea {
+      /* border-bottom: 2px solid #ccc !important;  */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    /* font-size: 1rem; */
+    outline: none;
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+  
+  }
+  
+  .input-line {
+    width: 100%;
+   
+    margin-top: 1px;
+  }
+  .form-group textarea::placeholder {
+    color: #999;
+    font-style: italic;
+    font-size: 1.6rem;
+  
+  
+  }
+  
+  .form-group input::placeholder {
+    color: #999;
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 1.6rem;
+  
+  }
+  
+  
+  
+  .form-group label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-left: 5px;
+  }
+  
+  .contact-button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid black;
+    max-width: 150px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 200px;
+  }
+  
+  .contact-button:hover {
+    background-color: #1E6F61;
+    color: #fff;
+    border: 1px solid #1E6F61;
+  }
+  @media (max-width: 767px) {
+    .form-page {
+      flex-direction: column; /* Stack form and info-section vertically */
+      padding: 0px 15px; /* Add some padding for mobile */
+      margin-top: -100px;
+    }
+  
+    .info-section,
+    .form-section {
+      max-width: 100%; /* Make sections full width */
+      margin: 0 auto;
+    }
+  
+    .animated-heading {
+      font-size: 3.5rem; 
+      margin-left: 10px; /* Center it */
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0; 
+      }
+      to {
+        opacity: 1; 
+      }
+    }
+  
+    .form-heading {
+      margin-top: 60px;
+      font-size: 1.5rem; 
+      margin-left: -70px;
+  
+    }
+  
+    .form-subheading {
+      font-size: 1rem; /* Adjust subheading size */
+      margin-left: -60px;
+      /* margin-right:90px; */
+    }
+  
+    .checkterms {
+   
+      display: flex;
+      align-items: center; /* Aligns checkbox and label vertically */
+      margin-top: 20px; /* Space between the last input field and the checkbox */
+      margin-bottom: 40px; /* Space below the checkbox */
+      margin-left: -60px;
+   
+    }
+    
+    .terms-label {
+      margin-left: 10px; /* Space between checkbox and label text */
+      font-size: 0.9rem; /* Adjust font size as needed */
+      color: #555; /* Ensure the text color matches your theme */
+    }
+    .error-message {
+      /* align-items: flex-start; */
+      text-align: start;
+      color: red;
+      font-size: 0.8rem;
+      margin-left: -210px; 
+  
+    }
+    
+  .input-line {
+    width: 150%;
+    margin-top: 1px;
+    margin-left: -70px;
+  }
+    
+    
+    .form-group input {
+      width: 100%;
+      margin-left: -150px;
+      /* padding: 10px; */
+      border: none;
+      background-color: transparent;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .form-group textarea {
+      margin-left: -150px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: transparent;
+      /* font-size: 1rem; */
+      outline: none;
+      resize: vertical; /* Allows the user to resize the textarea vertically */
+    
+    }
+    .form-group textarea::placeholder {
+      color: #999;
+      font-style: italic;
+      font-size: 1.2rem;
+    
+    
+    }
+    
+    .form-group input::placeholder {
+      color: #999;
+      margin-top: 30px;
+      font-style: italic;
+      font-size: 1.2rem;
+    
+    }
+    
+    
+  
+    .submit-button {
+      width: 100%; /* Make button full width on small screens */
+      margin-left: -60px;
+    }
+  
+    .form-divider {
+      margin-top: 15px; /* Reduce space above the line */
+      /* margin-left: -60px; */
+    }
+  
+    .info-section p {
+      font-size: 1rem; /* Adjust text size for info section */
+      line-height: 1.6;
+    }
+  
+    .info-item i {
+      font-size: 1.2rem; /* Adjust icon size */
+    }
+  
+    .info-item span {
+      font-size: 0.9rem; /* Adjust text size */
+    }
+  }
+  
+  
