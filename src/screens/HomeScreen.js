@@ -6,7 +6,6 @@ import Error from '../components/Error';
 import "antd/dist/reset.css";
 import { DatePicker } from 'antd';
 import moment from 'moment';
-import { set } from 'mongoose';
 
 const { RangePicker } = DatePicker;
 

@@ -3,7 +3,7 @@ import axios from 'axios';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
 import Success from '../components/Success';
-import { set } from 'mongoose';
+
 
 function RegisterScreen() {
 

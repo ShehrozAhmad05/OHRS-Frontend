@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-import { set } from 'mongoose';
 
 function LoginScreen() {
     const [email, setEmail] = useState('');
